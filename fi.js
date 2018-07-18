@@ -13,5 +13,13 @@ function getfile(file,callback)
 getfile("key.json",function(text){
   var data=JSON.parse(text);
   console.log(data);
+  details(data.basics);
 }
 )
+var child=document.querySelector(".child1");
+
+function details(det) {
+  var img=document.createElement("img");
+  img.src=det.image;
+  child.appendChild(img);
+}
